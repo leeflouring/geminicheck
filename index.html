@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini API 密钥批量可用性测试工具</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gemini API 密钥批量可用性测试工具</h1>
+        <p>在下方输入框中粘贴您的 API 密钥，每行一个。</p>
+        <textarea id="apiKeysInput" rows="10" placeholder="在此处粘贴 API 密钥，每行一个..."></textarea>
+        <button id="checkButton">开始测试</button>
+        <div id="status"></div>
+        <div class="results">
+            <div class="result-box">
+                <h2>有效的密钥</h2>
+                <textarea id="validKeysOutput" readonly></textarea>
+                <div class="button-group">
+                    <button class="copy-btn" data-target="validKeysOutput">复制</button>
+                    <button class="export-btn" data-target="validKeysOutput" data-filename="valid_keys.txt">导出</button>
+                </div>
+            </div>
+            <div class="result-box">
+                <h2>无效的密钥</h2>
+                <textarea id="invalidKeysOutput" readonly></textarea>
+                <div class="button-group">
+                    <button class="copy-btn" data-target="invalidKeysOutput">复制</button>
+                    <button class="export-btn" data-target="invalidKeysOutput" data-filename="invalid_keys.txt">导出</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js" type="module"></script>
+</body>
+</html>
